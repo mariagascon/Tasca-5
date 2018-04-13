@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora de criptomonedes amb AngularJS</title>
+</head>
+<body ng-controller="ctrlMonedas">
+    <h1>Calculadora de criptomonedas</h1>
+    <h2>Introduce la cantidad y la moneda de la cual quieres obtener la conversión</h2>
+    
+    <form ng-submit="insertar()">
+        <div>
+            <input type="number" id="cantidad" ng-model="valor" required>
+            <select id="tiposmonedas" ng-model="moneda">
+                <option value="EUR">Euro</option>
+                <option value="BTC">Bitcoin</option>
+                <option value="ETH">Ethereum</option>
+                <option value="BCH">Bitcoin Cash</option>
+                <option value="LTC">Litecoin</option>
+            </select>
+            <button type="submit" id="convertir" ng-click="convertir">Realizar conversión</button>
+        </div>
+    </form>
+
+    <br></br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>EURO</th>
+                <th>BITCOIN</th>
+                <th>ETHEREUM</th>
+                <th>BITCOIN CASH</th>
+                <th>LITECOIN</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="funciones.js"></script>
+
+</html>
